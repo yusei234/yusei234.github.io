@@ -178,9 +178,9 @@ If you use this work in your research, please cite:
 @misc{scanair2024,
   title={ScanAir: Autonomous Drone Navigation using Virtual Force Fields},
   author={Loyer, G. P. L. and Alves, M. V. A. P. and Chinaglia, V.},
-  year={2024},
+  year={2025},
   publisher={GitHub},
-  howpublished={\url{https://github.com/your-username/scanair}}
+  howpublished={\url{https://github.com/miguel-usp/tcc-scanair-doc}}
 }
 ```
 
