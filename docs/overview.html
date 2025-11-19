@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - VFF-Nav</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">VFF-Nav</a>
+                <button class="nav-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="overview.html" class="nav-link active">Overview</a></li>
+                    <li><a href="quickstart.html" class="nav-link">Quick Start</a></li>
+                    <li><a href="model.html" class="nav-link">Model</a></li>
+                    <li><a href="results.html" class="nav-link">Results</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Project Overview</h1>
+            <p class="subtitle">Understanding the VFF-Nav autonomous navigation system</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Project Vision</h2>
+            <p>VFF-Nav addresses the fundamental challenge of autonomous obstacle avoidance for UAVs using a Virtual
+                Force Field (VFF) approach. The algorithm creates attractive forces toward goals and repulsive forces
+                from obstacles, enabling real-time navigation in complex environments.</p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Real-time autonomous navigation</strong> and obstacle avoidance in dynamic environments</li>
+                <li><strong>Seamless integration</strong> with ROS 2 and Gazebo simulation environment</li>
+                <li><strong>Full compatibility</strong> with PX4 autopilot for real-world deployment</li>
+                <li><strong>Heuristic parameter optimization</strong> for optimal force field performance</li>
+                <li><strong>Electrostatic analogy model</strong> providing intuitive physical interpretation</li>
+                <li><strong>Robust collision avoidance</strong> using sonar-based obstacle detection</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical Architecture</h2>
+            <p>The VFF-Nav system is built on a modular architecture with three core components:</p>
+
+            <div class="home-grid">
+                <div class="card">
+                    <h3>ROS 2/Gazebo Simulator</h3>
+                    <p>Provides the virtual environment and dynamic model of the PX4 drone for comprehensive testing and
+                        validation.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Parameter Optimization Module</h3>
+                    <p>Heuristically explores the VFF parameter space to identify optimal configurations for different
+                        scenarios.</p>
+                </div>
+
+                <div class="card">
+                    <h3>VFF-Nav Controller</h3>
+                    <p>Implements the force field algorithm for reactive navigation and real-time obstacle avoidance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Applications</h2>
+            <p>The VFF-Nav system is designed for various real-world applications including:</p>
+            <ul>
+                <li>Infrastructure inspection and monitoring</li>
+                <li>Search and rescue operations</li>
+                <li>Agricultural monitoring and precision farming</li>
+                <li>Environmental data collection</li>
+                <li>Security and surveillance</li>
+                <li>Delivery and logistics in complex environments</li>
+            </ul>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="btn">← Back to Home</a>
+            <a href="quickstart.html" class="btn">Quick Start →</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Developed at Escola Politécnica da USP</p>
+            <p>Department of Computer Engineering and Digital Systems</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

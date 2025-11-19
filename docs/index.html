@@ -4,197 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VFF-Nav: Autonomous Drone Navigation using Virtual Force Fields</title>
-    <!-- MathJax for LaTeX rendering -->
+    <title>VFF-Nav: Autonomous Drone Navigation</title>
+    <link rel="stylesheet" href="styles/main.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #34495e;
-            --text-color: #333;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-
-        section {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--box-shadow);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            color: var(--dark-color);
-            margin: 1.5rem 0 1rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul,
-        ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        code {
-            background-color: var(--light-color);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-        }
-
-        pre {
-            background-color: var(--light-color);
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #2980b9;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .team-member {
-            background-color: var(--light-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-
-        th,
-        td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: var(--light-color);
-            color: var(--primary-color);
-        }
-
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        .math-block {
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            padding: 1rem;
-            background-color: #f8f9fa;
-            border-radius: var(--border-radius);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">VFF-Nav</a>
+                <button class="nav-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="overview.html" class="nav-link">Overview</a></li>
+                    <li><a href="quickstart.html" class="nav-link">Quick Start</a></li>
+                    <li><a href="model.html" class="nav-link">Model</a></li>
+                    <li><a href="results.html" class="nav-link">Results</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <h1>VFF-Nav: Autonomous Drone Navigation using Virtual Force Fields</h1>
@@ -210,280 +43,62 @@
             </div>
 
             <a href="https://github.com/miguel-usp/tcc-scanair-doc" class="btn">View Research Paper</a>
+            <a href="quickstart.html" class="btn">Get Started</a>
         </div>
     </header>
 
-    <div class="container">
-        <section id="overview">
-            <h2>Overview</h2>
-            <p>ScanAir addresses the fundamental challenge of autonomous obstacle avoidance for UAVs using a Virtual
-                Force Field (VFF) approach. The algorithm creates attractive forces toward goals and repulsive forces
-                from obstacles, enabling real-time navigation in complex environments.</p>
+    <main class="container">
+        <section>
+            <h2>Welcome to VFF-Nav</h2>
+            <p>An advanced autonomous navigation system for drones using Virtual Force Fields with heuristic parameter
+                optimization.</p>
 
-            <h3>Key Features</h3>
-            <ul>
-                <li>Real-time autonomous navigation and obstacle avoidance</li>
-                <li>Integration with ROS 2 and Gazebo simulation</li>
-                <li>Support for PX4 autopilot</li>
-                <li>Search of optimized parameters for the force field</li>
-            </ul>
-        </section>
-
-        <section id="quick-start">
-            <h2>⚡ Quick Start</h2>
-
-            <h3>Prerequisites</h3>
-            <ul>
-                <li>Ubuntu 22.04+ or 24.04+</li>
-                <li>ROS 2 Jazzy Jalisco</li>
-                <li>Gazebo Fortress or Garden</li>
-                <li>PX4 Autopilot</li>
-                <li>Python 3.10</li>
-            </ul>
-
-            <h3>Installation</h3>
-
-            <p><strong>1. Clone the repository:</strong></p>
-            <pre><code>git clone https://github.com/miguel-usp/vff-nav.git
-cd vff-nav</code></pre>
-
-            <p><strong>2. Setup the simulation environment:</strong></p>
-            <pre><code># Setup instructions will be added here</code></pre>
-
-            <p><strong>3. Build the workspace:</strong></p>
-            <pre><code>colcon build
-source install/setup.bash</code></pre>
-
-            <h3>Running the Simulation</h3>
-
-            <p><strong>1. Launch the simulation:</strong></p>
-            <pre><code>ros2 launch vff_nav simulation.launch.py</code></pre>
-
-            <p><strong>2. Run the VFF algorithm:</strong></p>
-            <p>In another terminal:</p>
-            <pre><code>ros2 run vff_nav vff_controller</code></pre>
-        </section>
-
-        <section id="model">
-            <h2>Center of Mass Guidance Model - Electrostatic Analogy</h2>
-            <p>This model uses an analogy to electrostatic forces to guide a drone towards a goal while avoiding
-                obstacles. The drone is treated as a charged particle influenced by attractive and repulsive forces.</p>
-
-            <h3>Definitions</h3>
-            <ul>
-                <li>\(d\vec{p}\): Position vector of the drone</li>
-                <li>\(d\vec{v} = \dfrac{d\vec{p}}{dt}\): Velocity vector of the drone</li>
-                <li>\(\vec{g}\): Position vector of the goal</li>
-                <li>\(\vec{o_i}\): Position vector of the center of obstacle \(i\) (assumed spherical)</li>
-                <li>\(n_{obs}\): Number of obstacles</li>
-                <li>\(\vec{r}_g = \vec{p} - \vec{g}\) (goal to drone)</li>
-                <li>\(\vec{r}_i = \vec{p} - \vec{o_i}\) (obstacle to drone)</li>
-                <li>\(\forall \vec{v} \neq \vec{0}, \hat{v} = \dfrac{\vec{v}}{\lVert\vec{v}\rVert}\). \(\hat{0} =
-                    \vec{0}\). \(\hat{v}\) is dimensionless, even if \(\vec{v}\) has units.</li>
-            </ul>
-
-            <h3>Total force</h3>
-            <div class="math-block">
-                \[
-                \vec{F}_{total} = \vec{F}_{goal} + \vec{F}_{\text{obs, squash}} + \vec{F}_{damping}
-                \]
-            </div>
-
-            <h3>Goal force</h3>
-            <div class="math-block">
-                \[
-                \vec{F}_{goal} = \left( -F_{\text{goal, const}} + \frac{k_e \cdot Q_{drone} \cdot
-                Q_{\text{goal}}}{\lVert\vec{r}_g\rVert^2 + \varepsilon_{\text{goal}}^2} \right) \hat{r}_g
-                \]
-            </div>
-
-            <p><strong>Notes:</strong></p>
-            <ul>
-                <li>The goal force is always attractive, pulling the drone towards the goal, due to \(Q_{goal} <
-                        0\).</li>
-                <li>\(k_e = 1 \left(N \cdot m^2 \cdot C^{-2}\right)\), a Coulomb's constant analog, is included for
-                    dimensional consistency. Since its value is 1, it does not affect the force magnitude and can be
-                    omitted in calculations.</li>
-                <li>\(Q_{drone} = 1 \left(C\right)\) is the drone's charge, which is constant. It is included for
-                    dimensional consistency. Since its value is 1, it does not affect the force magnitude and can be
-                    omitted in calculations.</li>
-            </ul>
-
-            <h3>Obstacle force</h3>
-            <div class="math-block">
-                \[
-                \vec{F}_{\text{obs},i} = \left( \frac{ k_e \cdot Q_{drone} \cdot Q_i }{ \lVert\vec{r}_i\rVert^2 +
-                \varepsilon_{\text{obs}}^2 } \right) \hat{r}_i
-                \]
-            </div>
-
-            <p><strong>Notes:</strong></p>
-            <ul>
-                <li>Each obstacle exerts a repulsive force on the drone, pushing it away from the obstacle, due to \(Q_i
-                    > 0\).</li>
-                <li>\(k_e = 1 \left(N \cdot m^2 \cdot C^{-2}\right)\), a Coulomb's constant analog, is included for
-                    dimensional consistency. Since its value is 1, it does not affect the force magnitude and can be
-                    omitted in calculations.</li>
-                <li>\(Q_{drone} = 1 \left(C\right)\) is the drone's charge, which is constant. It is included for
-                    dimensional consistency. Since its value is 1, it does not affect the force magnitude and can be
-                    omitted in calculations.</li>
-            </ul>
-
-            <h4>Raw and squashed obstacle force</h4>
-            <div class="math-block">
-                \[
-                \vec{F}_{\text{obs, raw}} = \sum_{i=1}^{n_{\text{obs}}}{\vec{F}_{\text{obs},i}}
-                \]
-                \[
-                \vec{F}_{\text{obs, squash}} = F_{\text{fac,squash}} \cdot \tanh\left( \frac{ \lVert \vec{F}_{\text{obs,
-                raw}} \rVert }{ F_{\text{sat}} } \right) \cdot \hat{F}_{\text{obs, raw}}
-                \]
-            </div>
-
-            <p><strong>Notes:</strong></p>
-            <ul>
-                <li>\(\forall x \in \mathbb{R}, \tanh(x) \in [-1, 1]\)</li>
-                <li>\(\forall x \in [-0.3, 0.3], \lvert \tanh(x) - x \rvert < 0.01\) - This fact is used to skip
-                        squashing when the raw obstacle force is small enough, improving performance without significant
-                        loss of accuracy.</li>
-            </ul>
-
-            <h3>Damping force</h3>
-            <div class="math-block">
-                \[
-                \vec{F}_{damping} = -K_{damping} \cdot \vec{v}
-                \]
-            </div>
-
-            <h3>System invariants</h3>
-            <ul>
-                <li>Coulomb's constant (analog): \(k_e = 1 \left(N \cdot m^2 \cdot C^{-2}\right)\)</li>
-                <li>Drone mass: \(m_{drone} = 1 \left(kg\right)\)</li>
-                <li>Drone charge: \(Q_{drone} = 1 \left(C\right)\)</li>
-                <li>Obstacle charges: \(Q_i \in [0, +1] \left(C\right)\)</li>
-            </ul>
-
-            <h3>Parameters for calibration</h3>
-            <p>These are going to be determined by the simulation calibration program.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Description</th>
-                        <th>Unit</th>
-                        <th>Range</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>\(Q_{goal}\)</td>
-                        <td>Goal charge</td>
-                        <td>C</td>
-                        <td>\(]-\infty, 0[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(F_{goal, const}\)</td>
-                        <td>Goal constant attraction</td>
-                        <td>N</td>
-                        <td>\([0, +\infty[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(\varepsilon_{goal}\)</td>
-                        <td>Goal softening factor</td>
-                        <td>m</td>
-                        <td>\([0, +\infty[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(\varepsilon_{obs}\)</td>
-                        <td>Obstacle softening factor</td>
-                        <td>m</td>
-                        <td>\([0, +\infty[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(F_{\text{sat}}\)</td>
-                        <td>Obstacle total saturation scale</td>
-                        <td>N</td>
-                        <td>\(]0, +\infty[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(F_{\text{fac,squash}}\)</td>
-                        <td>Obstacle total factor after squashing</td>
-                        <td>N</td>
-                        <td>\([0, +\infty[\)</td>
-                    </tr>
-                    <tr>
-                        <td>\(K_{damping}\)</td>
-                        <td>Damping constant</td>
-                        <td>N·s/m</td>
-                        <td>\([0, +\infty[\)</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Notes</h3>
-            <ul>
-                <li><strong>No singularities:</strong> both goal and obstacles use \(\varepsilon\) to avoid \(1/r^2\)
-                    blow-ups.</li>
-                <li><strong>Dimensionless tanh:</strong> \(\dfrac{\lVert \vec{F}_{\text{obs, raw}}
-                    \rVert}{F_{\text{sat}}}\) is unitless; \(F_{\text{fac,squash}}\) carries the resulting Newton scale.
-                </li>
-            </ul>
-        </section>
-
-        <section id="results">
-            <h2>Results</h2>
-
-            <h3>Performance Metrics and Optimal parameters</h3>
-            <p>Results from our simulation and parameter optimization will be displayed here.</p>
-
-            <h3>Demo</h3>
-            <p><strong>Links to demonstration videos:</strong></p>
-            <ul>
-                <li><a href="#">Basic Navigation Demo</a></li>
-                <li><a href="#">Obstacle Avoidance Demo</a></li>
-                <li><a href="#">Parameter Optimization Process</a></li>
-            </ul>
-        </section>
-
-        <section id="team">
-            <h2>Team</h2>
-            <p>This project was developed by:</p>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Gavril Loyer</h3>
-                    <p>ID: 16101509</p>
+            <div class="home-grid">
+                <div class="card">
+                    <h3>🚀 Quick Start</h3>
+                    <p>Get up and running with our installation guide and simulation setup.</p>
+                    <a href="quickstart.html" class="btn">Get Started</a>
                 </div>
-                <div class="team-member">
-                    <h3>Miguel Velasques Abilio Piola Alves</h3>
-                    <p>ID: 11807601</p>
+
+                <div class="card">
+                    <h3>📊 Mathematical Model</h3>
+                    <p>Explore the electrostatic analogy and force field equations behind our approach.</p>
+                    <a href="model.html" class="btn">View Model</a>
                 </div>
-                <div class="team-member">
-                    <h3>Vitor Chinaglia</h3>
-                    <p>ID: 11912363</p>
+
+                <div class="card">
+                    <h3>🎯 Results</h3>
+                    <p>See performance metrics, optimal parameters, and demonstration videos.</p>
+                    <a href="results.html" class="btn">View Results</a>
                 </div>
             </div>
-
-            <h3>Supervision</h3>
-            <ul>
-                <li>Prof. Dr. Bruno Albertini</li>
-                <li>In partnership with CITI-USP</li>
-            </ul>
         </section>
 
-        <section id="citation">
-            <h2>Citation</h2>
-            <p>If you use this work in your research, please cite:</p>
-            <pre><code>@misc{scanair2024,
-  title={ScanAir: Autonomous Drone Navigation using Virtual Force Fields},
-  author={Loyer, G. P. L. and Alves, M. V. A. P. and Chinaglia, V.},
-  year={2025},
-  publisher={GitHub},
-  howpublished={\url{https://github.com/miguel-usp/tcc-scanair-doc}}
-}</code></pre>
+        <section>
+            <h2>Key Features</h2>
+            <div class="home-grid">
+                <div class="card">
+                    <h3>Real-time Navigation</h3>
+                    <p>Autonomous obstacle avoidance and path planning in dynamic environments.</p>
+                </div>
+
+                <div class="card">
+                    <h3>ROS 2 Integration</h3>
+                    <p>Seamless integration with ROS 2 and Gazebo simulation environment.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Parameter Optimization</h3>
+                    <p>Heuristic search for optimal Virtual Force Field parameters.</p>
+                </div>
+
+                <div class="card">
+                    <h3>PX4 Autopilot</h3>
+                    <p>Compatible with PX4 autopilot for real-world deployment.</p>
+                </div>
+            </div>
         </section>
-    </div>
+    </main>
 
     <footer>
         <div class="container">
@@ -491,6 +106,8 @@ source install/setup.bash</code></pre>
             <p>Department of Computer Engineering and Digital Systems</p>
         </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

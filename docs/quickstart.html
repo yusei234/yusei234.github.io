@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start - VFF-Nav</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo">VFF-Nav</a>
+                <button class="nav-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="overview.html" class="nav-link">Overview</a></li>
+                    <li><a href="quickstart.html" class="nav-link active">Quick Start</a></li>
+                    <li><a href="model.html" class="nav-link">Model</a></li>
+                    <li><a href="results.html" class="nav-link">Results</a></li>
+                    <li><a href="team.html" class="nav-link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Quick Start Guide</h1>
+            <p class="subtitle">Get up and running with VFF-Nav in minutes</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Ubuntu 22.04+ or 24.04+</li>
+                <li>ROS 2 Jazzy Jalisco</li>
+                <li>Gazebo Fortress or Garden</li>
+                <li>PX4 Autopilot</li>
+                <li>Python 3.10</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Installation</h2>
+
+            <h3>1. Clone the repository</h3>
+            <pre><code>git clone https://github.com/miguel-usp/vff-nav.git
+cd vff-nav</code></pre>
+
+            <h3>2. Setup the simulation environment</h3>
+            <pre><code># Install ROS 2 dependencies
+sudo apt update
+sudo apt install ros-jazzy-desktop
+
+# Setup PX4 environment
+git submodule update --init --recursive
+make px4_sitl gazebo-classic</code></pre>
+
+            <h3>3. Build the workspace</h3>
+            <pre><code>colcon build
+source install/setup.bash</code></pre>
+        </section>
+
+        <section>
+            <h2>Running the Simulation</h2>
+
+            <h3>1. Launch the simulation</h3>
+            <pre><code>ros2 launch vff_nav simulation.launch.py</code></pre>
+
+            <h3>2. Run the VFF algorithm</h3>
+            <p>In another terminal:</p>
+            <pre><code>ros2 run vff_nav vff_controller</code></pre>
+
+            <h3>3. Monitor the simulation</h3>
+            <pre><code># View robot transformation
+ros2 run rqt_tf_tree rqt_tf_tree
+
+# Monitor topics
+ros2 topic list
+ros2 topic echo /drone/position</code></pre>
+        </section>
+
+        <section>
+            <h2>Configuration</h2>
+            <p>Customize the VFF parameters in the configuration file:</p>
+            <pre><code># config/vff_params.yaml
+goal_charge: -1.0
+goal_constant_force: 2.0
+obstacle_saturation: 5.0
+damping_constant: 0.5</code></pre>
+        </section>
+
+        <section>
+            <h2>Troubleshooting</h2>
+
+            <h3>Common Issues</h3>
+            <ul>
+                <li><strong>Gazebo not launching:</strong> Ensure all ROS 2 environment variables are set</li>
+                <li><strong>PX4 connection issues:</strong> Check MAVLink communication ports</li>
+                <li><strong>Permission denied:</strong> Add your user to the dialout group:
+                    <code>sudo usermod -a -G dialout $USER</code></li>
+            </ul>
+
+            <h3>Getting Help</h3>
+            <p>If you encounter issues, please:</p>
+            <ol>
+                <li>Check the <a href="https://github.com/miguel-usp/vff-nav/issues">GitHub Issues</a></li>
+                <li>Review the <a href="model.html">Mathematical Model</a> documentation</li>
+                <li>Create a new issue with detailed error information</li>
+            </ol>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="overview.html" class="btn">← Overview</a>
+            <a href="model.html" class="btn">Mathematical Model →</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Developed at Escola Politécnica da USP</p>
+            <p>Department of Computer Engineering and Digital Systems</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
